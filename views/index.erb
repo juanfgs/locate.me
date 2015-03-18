@@ -1,0 +1,27 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+</head>
+
+<body>
+
+<ul>
+
+	<% @statuses.each do |status|  %>
+	<li>
+		<img src="<%= "http://maps.googleapis.com/maps/api/staticmap?center=#{status.latlon}&zoom=13&size=600x300" %>" />
+	</li>
+	<% end %>
+</ul>
+
+</body>
+
+</html>
