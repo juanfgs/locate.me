@@ -1,6 +1,8 @@
 require 'sinatra'
 require './app/models/status.rb'
 
+set :public_folder, './static/'
+
 get '/' do
   @statuses = Status.all()
 
@@ -13,7 +15,7 @@ get '/acquire' do
 end
 
 post '/acquire' do
-  Status.create( {:latlon => params[:latitude] + "," + params[:longitude]} )
+  Status.create( {:latitude => params[:latitude], :longitude => params[:longitude]} )
 end
-  
+ 
 
